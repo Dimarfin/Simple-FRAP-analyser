@@ -108,8 +108,8 @@ def find_spot_center(images):
 #     return Ir,np.array(t_stamps),images,ref_img
 
 def ReadFrapData(DirPath):
-    st.write(DirPath)
     names = list(os.listdir(DirPath))
+    names.sort()
     images = []
     ref_img = []
     t_stamps = []
@@ -130,6 +130,9 @@ def ReadFrapData(DirPath):
                         #print(stime)
                         ts = time.mktime(datetime.datetime.strptime("2000-01-01 "+stime, "%Y-%m-%d %H-%M-%S").timetuple())
                         t_stamps = t_stamps +[ts]
+                else:
+                    ts = time.mktime(datetime.datetime.strptime("1999-01-01 "+"00-00-01", "%Y-%m-%d %H-%M-%S").timetuple())
+                    t_stamps = t_stamps +[ts]
     #st.write(names)                    
     if len(names) > 0:
         if ref_img==[]:
