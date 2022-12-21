@@ -222,6 +222,9 @@ def t_text2float(t_text):
     
 def GetData(datasrc,place1):
     if datasrc == 'Upload files':
+        DirPath = './data/uploads'
+        if not os.path.exists(DirPath):
+           os.makedirs(DirPath)
         with place1:
             with st.form("my-form", clear_on_submit=True):
                 image_files = st.file_uploader("Upload Images", 
@@ -240,7 +243,7 @@ def GetData(datasrc,place1):
                 imgpath = os.path.join('./data/uploads', file.name)
                 with open(imgpath, mode="wb") as f:
                     f.write(file.getbuffer())
-            DirPath = './data/uploads'
+            #DirPath = './data/uploads'
             if len(image_files) > 0:
                 RunModel(DirPath)
         
