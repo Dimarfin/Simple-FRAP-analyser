@@ -250,9 +250,9 @@ def GetData(datasrc,place1):
         
     if datasrc == 'Preloaded data': 
         path_dict = {
-            'POPC bilayer':'.\data\popc-b1',
-            'POPC70-DOTAP30 bilayer':'.\data\dotap30b6', 
-            'Simulated':'.\data\simulation'
+            'POPC bilayer':'./data/popc-b1',
+            'POPC70-DOTAP30 bilayer':'./data/dotap30b6', 
+            'Simulated':'./data/simulation'
             }
         with place1:
             option = st.selectbox(
