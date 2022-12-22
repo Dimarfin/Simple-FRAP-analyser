@@ -500,7 +500,7 @@ with col_a:
     st.write('Analyse your fluorescence recovery after photobleaching data')
 with col_b:
     st.markdown("<b style='text-align: right; color: grey;'>Created by</b>", unsafe_allow_html=True)
-    st.markdown("<b style='text-align: right; color: grey;'>Dzmitry Afanasekau</b>", unsafe_allow_html=True)
+    st.markdown("<b style='text-align: right; color: grey;'>Dzmitry Afanasenkau</b>", unsafe_allow_html=True)
     #st.write('Created by')
     
 st.markdown("""---""")
